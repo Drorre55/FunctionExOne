@@ -11,22 +11,24 @@ namespace FunctionExOne
     {
         public int GetLastDigit(int number)
         {
-            throw new NotImplementedException();
+            return number % 10;
         }
 
         public int GetAllButLastDigit(int number)
         {
-            throw new NotImplementedException();
+            int number_minus_last_digit = number - GetLastDigit(number);
+            return number_minus_last_digit / 10;
         }
 
         public int GetAmountOfDigits(int number)
         {
-            throw new NotImplementedException();
+            return number.ToString().Length;
         }
 
         public int GetDigintInIndex(int number, int index)
         {
-            throw new NotImplementedException();
+            char char_in_index = number.ToString()[index];
+            return int.Parse(char_in_index.ToString());
         }
     }
 }
